@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Gloria+Hallelujah&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+
 $body-bg-color: #1f2029;
 $cube-front-side-bg-color: lighten($body-bg-color, 60%);
 $cube-back-side-bg-color: lighten($body-bg-color, 50%);
