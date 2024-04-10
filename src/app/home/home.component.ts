@@ -32,9 +32,7 @@ createNotify(type: string): void {
 }
 
 onSubmit() {
-  // Lưu dữ liệu từ form vào local storage
-  localStorage.setItem('contactFormData', JSON.stringify(this.formData));
-    
+  // localStorage.setItem('contactFormData', JSON.stringify(this.formData));
 }
 
 

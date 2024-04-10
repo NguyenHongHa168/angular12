@@ -31,8 +31,22 @@ $cube-bottom-side-bg-color: lighten($body-bg-color, 10%);
 .project{
   overflow: hidden;
 }
+//header__mobile
+
+.header__mobile{
+  position: absolute;
+  width: 300px;
+  background-color: whitesmoke;
+  z-index: 99999;
+  color: black !important;
+  p{
+    padding:5px;
+
+  }
+}
 // header
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -590,7 +604,8 @@ $cube-bottom-side-bg-color: lighten($body-bg-color, 10%);
   }
 
   .featured {
-    padding: 0px 5px 80px !important;
+    // padding: 0px 5px 80px !important;
+    padding: 0px 5px 10px !important;
   }
 
   .grid-area {
@@ -825,6 +840,9 @@ $cube-bottom-side-bg-color: lighten($body-bg-color, 10%);
       display: none;
     }
   }
+    .header img{
+      margin: 0;
+    }
 }
 
 .timeline_company {
