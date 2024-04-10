@@ -1,6 +1,8 @@
 import { Component, ElementRef,NO_ERRORS_SCHEMA  } from '@angular/core';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 
+import { NzNotificationModule, NzNotificationService } from 'ng-zorro-antd/notification';
+
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -10,16 +12,30 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
   schemas: [NO_ERRORS_SCHEMA] 
 })
 export class HomeComponent {
+  formData: any = {};
 ngOnInit(): void {
+console.log("test", localStorage.getItem(this.formData));
 }
 constructor(
+  private notification: NzNotificationService
 ) { }
 
 toggleIconMenu(){
 }
 
+createNotify(type: string): void {
+  this.notification.create(
+    type,
+    'Thông báo',
+    'Bạn đã gửi thành công !!!'
+  );
+}
 
-
+onSubmit() {
+  // Lưu dữ liệu từ form vào local storage
+  localStorage.setItem('contactFormData', JSON.stringify(this.formData));
+    
+}
 
 
 }
