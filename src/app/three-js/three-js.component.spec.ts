@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PageComponent } from './page.component';
+import { ThreeJsComponent } from './three-js.component';
 
-describe('PageComponent', () => {
-  let component: PageComponent;
-  let fixture: ComponentFixture<PageComponent>;
+describe('ThreeJsComponent', () => {
+  let component: ThreeJsComponent;
+  let fixture: ComponentFixture<ThreeJsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PageComponent]
+      imports: [ThreeJsComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(PageComponent);
+    fixture = TestBed.createComponent(ThreeJsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

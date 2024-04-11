@@ -22,7 +22,8 @@ export class HomeComponent {
   }
   constructor(
     private notification: NzNotificationService,
-    private nzMessageService: NzMessageService
+    private nzMessageService: NzMessageService,
+    private message: NzMessageService
   ) { }
 
   createNotify(type: string): void {
@@ -34,6 +35,7 @@ export class HomeComponent {
   }
 
   onSubmit() {
+    var inputEmail= document.getElementById("email");
   }
 
   iconHeader() {
