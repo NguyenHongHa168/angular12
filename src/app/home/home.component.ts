@@ -14,7 +14,6 @@ import { NzNotificationModule, NzNotificationService } from 'ng-zorro-antd/notif
 export class HomeComponent {
   formData: any = {};
 ngOnInit(): void {
-console.log("test", localStorage.getItem(this.formData));
 }
 constructor(
   private notification: NzNotificationService
@@ -32,7 +31,6 @@ createNotify(type: string): void {
 }
 
 onSubmit() {
-  // localStorage.setItem('contactFormData', JSON.stringify(this.formData));
 }
 
 
