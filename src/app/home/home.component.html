@@ -3,19 +3,12 @@
   <header id="1">
     <div class="header">
       <img src="/assets/images/logo.png" alt="logo">
-      <div style="width: 60px;min-height: 60px;font-size: 20px; color:whitesmoke; display:none" id="header-icon__mobile">
+      <div id="header-icon__mobile" (click)="iconHeader()" class="none">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
           viewBox="0 0 16 16">
           <path fill-rule="evenodd"
             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
         </svg>
-      </div>
-
-      <div class="header__mobile d-none">
-          <p>About</p>
-          <p>Skill</p>
-          <p>Work</p>
-          <p>Contact</p>
       </div>
       <div class="header_content">
         <ul>
@@ -38,6 +31,20 @@
   </header>
   <!-- intro -->
   <section class="intro">
+    <div class="header__mobile mt-2" *ngIf="checkScreen">
+      <a href="#1">
+        <p>About</p>
+      </a>
+      <a href="#2">
+        <p>Skill</p>
+      </a>
+      <a href="#3">
+        <p>Work</p>
+      </a>
+      <a href="#4">
+        <p>Contact</p>
+      </a>
+  </div>
     <div class="intro-content">
       <h1 class="title">Hi, I'm Nguyen Hong Ha</h1>
       <p class="description">

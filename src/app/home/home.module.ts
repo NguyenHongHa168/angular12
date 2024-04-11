@@ -5,7 +5,8 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
     CommonModule,
     NzCarouselModule,
