@@ -4,6 +4,10 @@ import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzMessageService } from 'ng-zorro-antd/message';
 
 import { NzNotificationModule, NzNotificationService } from 'ng-zorro-antd/notification';
+interface ContactForm {
+  email: string;
+  message: string;
+}
 
 @Component({
   selector: 'app-home',
@@ -14,11 +18,16 @@ import { NzNotificationModule, NzNotificationService } from 'ng-zorro-antd/notif
   schemas: [NO_ERRORS_SCHEMA]
 })
 export class HomeComponent {
-  formData: any = {};
+  formData: ContactForm = { email: '', message: '' };
+  private storageKey = 'contact-form';
+  // formData: any = {};
   checkScreen : boolean = false;
 
   ngOnInit(): void {
-
+const saved = localStorage.getItem(this.storageKey);
+    if (saved) {
+      this.formData = JSON.parse(saved);
+    }
   }
   constructor(
     private notification: NzNotificationService,
@@ -26,17 +35,12 @@ export class HomeComponent {
     private message: NzMessageService
   ) { }
 
-  createNotify(type: string): void {
-    this.notification.create(
-      type,
-      'Thông báo',
-      'Bạn đã gửi thành công !!!'
-    );
-  }
-
-  onSubmit() {
-    var inputEmail= document.getElementById("email");
-  }
+  createNotify(type: 'success' | 'info' | 'warning' | 'error'): void {
+  this.notification[type](
+    'Thông báo',
+    'Bạn đã gửi thành công !!!'
+  );
+}
 
   iconHeader() {
     var screenWidth = window.innerWidth;
@@ -44,4 +48,10 @@ export class HomeComponent {
       this.checkScreen = !this.checkScreen
     }
   }
+
+ onSubmit() {
+    localStorage.setItem(this.storageKey, JSON.stringify(this.formData));
+    this.createNotify('success');
+  }
+
 }
