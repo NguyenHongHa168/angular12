@@ -8,7 +8,7 @@
           viewBox="0 0 16 16">
           <path fill-rule="evenodd"
             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-        </svg>
+        </svg>ư
       </div>
       <div class="header_content">
         <ul>
@@ -48,13 +48,13 @@
     <div class="intro-content">
       <h1 class="title d-flex justify-content-start">Hi, I'm Nguyen Hong Ha</h1>
       <p class="description">
-        <span class="collage-art">Frontend Developer </span> Passionate about building user-centric, high-performance
-        web applications using Angular and seamless backend integration with Python APIs. Skilled at writing clean,
-        maintainable code, optimizing UI/UX, and ensuring responsive design. Eager to join a dynamic team and progress
-        toward a full‑stack role, creating scalable, impactful products.
+        <span class="collage-art">Frontend Developer </span> Passionate Frontend Developer with 2 years of
+        experience in Angular, Python and API for backend/API integration. Seeking to join a dynamic team to build
+        scalable, user-centric applications while advancing toward becoming a full-stack developer.
       </p>
       <!-- <a href="" download >Github</a> -->
-      <a href="/assets/images/NguyenThiHongHa-FE-new.pdf" target="_blank" class="btn pointer" attributes-list> Dowload
+      <a href="assets/images/NguyenThiHongHa_Frontend_angular.pdf" target="_blank" class="btn pointer" attributes-list>
+        Dowload
         CV
       </a>
     </div>
@@ -193,75 +193,50 @@
   <section class="featured">
     <h1 class="featured-title">My work project</h1>
     <div class="container">
-      <!-- project Dogshop -->
-      <a href="https://runechualanh.com/" target="_blank" data-aos-duration="3000">
-        <div class="work" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1500">
-          <div class="main-content">
-            <div class="header">
-              <span>Rune Chữa Lành</span>
-              <span> 07/2024 </span>
-            </div>
-            <img src="../../assets/images/runechualanh.jpg" width="100%" height="50%" alt="Project_1">
-            <p class="heading">
-              The website is an outsourced project handled by the team. It is designed to
-              calculate a user's zodiac sign and personality traits based on their date of birth.
-            </p>
-            <div class="categories">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>TypeScript</span>
-              <span>ANGULAR </span>
-            </div>
-          </div>
-        </div>
-      </a>
-      <!-- netflix -->
-      <a href="https://nguyenhongha.netlify.app" target="_blank">
-        <div class="work" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="500">
-          <div class="main-content">
-            <div class="header">
-              <span>Netflix</span>
-              <span>04/2024</span>
-            </div>
-            <img src="/assets/images/netflix.jpg" width="100%" height="50%" alt="Project_">
-            <p class="heading">
-              The web utilizes APIs to fetch movies Additionally, it includes features such as login, logout, and
-              various other functionalities
-            </p>
-            <div class="categories">
-              <span>Angular</span>
-              <span>TypeScript</span>
-              <span>HTML</span>
-              <span>Scss</span>
-            </div>
-          </div>
-        </div>
-      </a>
       <!-- my profile -->
-      <a href="https://github.com/NguyenHongHa168/angular12.git" target="_blank">
+      <p-carousel [value]="project" [numVisible]="1" [numScroll]="1" [circular]="false"
+        [responsiveOptions]="responsiveOptions" [showIndicators]="true" [showNavigators]="true">
+        <ng-template let-item pTemplate="item">
+          <a [href]="item.link" target="_blank" class="overflow-hidden">
+            <div class="work" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+              <div class="main-content">
+                <div class="header">
+                  <span>{{ item.name }}</span>
+                  <span>{{ item.datetime }}</span>
+                </div>
+                <img [src]="item.img" width="100%" height="50%" alt="{{ item.name }}">
+                <p class="heading">{{ item.description }}</p>
+                <div class="categories">
+                  <span *ngFor="let tech of item.technical">{{ tech }}</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </ng-template>
+      </p-carousel>
+
+
+
+      <!-- <a [href]="items.link" target="_blank" *ngFor="let items of project">
         <div class="work" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
           <div class="main-content ">
             <div class="header">
-              <span>My Profile</span>
-              <span>03/2024</span>
+              <span>{{items.name}}</span>
+              <span>{{items.date}}</span>
             </div>
-            <img src="/assets/images/project_profile.jpg" width="100%" height="50%" alt="Project_1">
+            <img [src]="items.img" width="100%" height="50%" alt="Project_1">
             <p class="heading">
-              The website utilizes CSS, BEM, AOS for creating effects, and employs grid to ensure responsiveness across
-              all user interfaces.
+               {{items.description}}
             </p>
             <div class="categories">
-              <span>ANGULAR </span>
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>TS</span>
+              <span>Odoo </span>
+              <span>Python</span>
+              <span>SQL</span>
+              <span>XML</span>
             </div>
           </div>
         </div>
-      </a>
-
-
-
+      </a> -->
     </div>
   </section>
   <!-- contact -->

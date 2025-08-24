@@ -1,6 +1,3 @@
-import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -10,19 +7,15 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBv4DCom38KaYhr3afIK0qWle9Zg0Eb17I",
-  authDomain: "nguyenhongha-ef3c3.firebaseapp.com",
-  projectId: "nguyenhongha-ef3c3",
-  storageBucket: "nguyenhongha-ef3c3.appspot.com",
-  messagingSenderId: "160175388818",
-  appId: "1:160175388818:web:d11e171c698f38a5154e4b",
-  measurementId: "G-HVNXJLCYYX"
+  apiKey: "AIzaSyCRR0QP1cxCYSdl-zpVk1l7MewODP3e5wo",
+  authDomain: "nguyenhongha-9e68c.firebaseapp.com",
+  projectId: "nguyenhongha-9e68c",
+  storageBucket: "nguyenhongha-9e68c.firebasestorage.app",
+  messagingSenderId: "899249835127",
+  appId: "1:899249835127:web:28aa0723fe1aa4e7a4ca72",
+  measurementId: "G-QT54KF1T3T"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
