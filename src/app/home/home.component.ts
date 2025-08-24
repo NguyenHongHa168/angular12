@@ -72,10 +72,6 @@ export class HomeComponent {
   ]
 
   ngOnInit(): void {
-const saved = localStorage.getItem(this.storageKey);
-    if (saved) {
-      this.formData = JSON.parse(saved);
-    }
   }
   constructor(
     private notification: NzNotificationService,
@@ -97,10 +93,5 @@ const saved = localStorage.getItem(this.storageKey);
     }
   }
 
- onSubmit() {
-    localStorage.setItem(this.storageKey, JSON.stringify(this.formData));
-    this.createNotify('success');
-    console.log("test");
-  }
 
 }

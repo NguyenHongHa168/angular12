@@ -249,11 +249,11 @@
         <textarea placeholder="Your message" type="email" [(ngModel)]="formData.email" name="email"></textarea>
         <button (click)="createNotify('success')"> Submit</button>
       </form> -->
-      <form class="form" (ngSubmit)="onSubmit()">
+      <form class="form" >
         <div class="title">Contact us</div>
         <input placeholder="Your email" class="input" type="text" [(ngModel)]="formData.email" name="email" />
         <textarea placeholder="Your message" class="input" [(ngModel)]="formData.message" name="message"></textarea>
-        <button type="submit" (click)="onSubmit()">Submit</button>
+        <button type="submit" >Submit</button>
       </form>
       <div class="earth" style="position: relative !important;">
         <div class="cube">
