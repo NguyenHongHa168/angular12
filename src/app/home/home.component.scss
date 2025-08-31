@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Gloria+Hallelujah&family=Montserrat:wght@400;500;600;700;800;900&display=swap");
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
 
 $body-bg-color: #1f2029;
 $cube-front-side-bg-color: lighten($body-bg-color, 60%);
@@ -17,53 +15,63 @@ $cube-bottom-side-bg-color: lighten($body-bg-color, 10%);
   padding: 0;
   box-sizing: border-box;
 }
-a{
+
+a {
   color: rgb(153, 153, 153);
   text-decoration: none;
 }
+
 :root {
   --border-radius: 10px;
 }
-.none{
+
+.none {
   display: none;
 }
+
 .pointer {
   cursor: pointer;
 }
+
 .title {
   padding-top: 20px !important;
 }
-.project{
+
+.project {
   overflow: hidden;
 }
+
 //header__mobile
-#header-icon__mobile{
+#header-icon__mobile {
   width: 60px;
   min-height: 60px;
   font-size: 20px;
-   color:whitesmoke;
-   position: relative;
+  color: whitesmoke;
+  position: relative;
 }
-.header__mobile{
+
+.header__mobile {
   position: absolute;
   top: 70px;
   right: 20px;
   width: 200px;
   background-color: whitesmoke;
   z-index: 99999;
-  padding:10px;
+  padding: 10px;
   color: black !important;
   border-radius: 5px;
 
-  p{
-    padding:5px;
+  p {
+    padding: 5px;
     color: #484747;
-    &:hover{
+
+    &:hover {
       color: rgb(106, 103, 103);
     }
   }
-  &::before{
-    position:absolute ;
+
+  &::before {
+    position: absolute;
     top: -7px;
     right: 20px;
     content: "";
@@ -72,26 +80,31 @@ a{
     background-color: whitesmoke;
     transform: rotate(45deg)
   }
- 
+
 }
+
 // header
 .header {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   img {
     width: 200px;
     margin-left: 30px;
   }
+
   .header_content {
     color: rgb(153, 153, 153);
+
     ul {
       display: flex;
       gap: 100px;
       list-style: none;
       margin-right: 70px;
       font-weight: bold;
+
       li:hover {
         color: white;
         cursor: pointer;
@@ -109,146 +122,106 @@ a{
 
 .project {
   font-family: "Montserrat", sans-serif;
-  background-image: radial-gradient(
-      circle at 65% 15%,
+  background-image: radial-gradient(circle at 65% 15%,
       rgba(255, 255, 255, 0.01) 0%,
       rgba(255, 255, 255, 0.01) 3%,
       transparent 3%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 40% 33%,
+      transparent 100%),
+    radial-gradient(circle at 40% 33%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 3%,
       transparent 3%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 9% 92%,
+      transparent 100%),
+    radial-gradient(circle at 9% 92%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 3%,
       transparent 3%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 84% 0%,
+      transparent 100%),
+    radial-gradient(circle at 84% 0%,
       rgba(255, 255, 255, 0.01) 0%,
       rgba(255, 255, 255, 0.01) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 97% 94%,
+      transparent 100%),
+    radial-gradient(circle at 97% 94%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 13% 95%,
+      transparent 100%),
+    radial-gradient(circle at 13% 95%,
       rgba(255, 255, 255, 0.02) 0%,
       rgba(255, 255, 255, 0.02) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 77% 8%,
+      transparent 100%),
+    radial-gradient(circle at 77% 8%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 58% 0%,
+      transparent 100%),
+    radial-gradient(circle at 58% 0%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 76% 71%,
+      transparent 100%),
+    radial-gradient(circle at 76% 71%,
       rgba(255, 255, 255, 0.02) 0%,
       rgba(255, 255, 255, 0.02) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 88% 74%,
+      transparent 100%),
+    radial-gradient(circle at 88% 74%,
       rgba(255, 255, 255, 0.01) 0%,
       rgba(255, 255, 255, 0.01) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 74% 99%,
+      transparent 100%),
+    radial-gradient(circle at 74% 99%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 16% 56%,
+      transparent 100%),
+    radial-gradient(circle at 16% 56%,
       rgba(255, 255, 255, 0.02) 0%,
       rgba(255, 255, 255, 0.02) 7%,
       transparent 7%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 25% 4%,
+      transparent 100%),
+    radial-gradient(circle at 25% 4%,
       rgba(255, 255, 255, 0.02) 0%,
       rgba(255, 255, 255, 0.02) 5%,
       transparent 5%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 54% 83%,
+      transparent 100%),
+    radial-gradient(circle at 54% 83%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 5%,
       transparent 5%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 70% 60%,
+      transparent 100%),
+    radial-gradient(circle at 70% 60%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 5%,
       transparent 5%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 23% 73%,
+      transparent 100%),
+    radial-gradient(circle at 23% 73%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 5%,
       transparent 5%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 63% 81%,
+      transparent 100%),
+    radial-gradient(circle at 63% 81%,
       rgba(255, 255, 255, 0.01) 0%,
       rgba(255, 255, 255, 0.01) 5%,
       transparent 5%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 56% 58%,
+      transparent 100%),
+    radial-gradient(circle at 56% 58%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 5%,
       transparent 5%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 64% 68%,
+      transparent 100%),
+    radial-gradient(circle at 64% 68%,
       rgba(255, 255, 255, 0.03) 0%,
       rgba(255, 255, 255, 0.03) 5%,
       transparent 5%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at 52% 48%,
+      transparent 100%),
+    radial-gradient(circle at 52% 48%,
       rgba(255, 255, 255, 0.01) 0%,
       rgba(255, 255, 255, 0.01) 5%,
       transparent 5%,
-      transparent 100%
-    ),
+      transparent 100%),
     linear-gradient(0deg, rgb(18, 23, 42), rgb(13, 18, 34));
   background-repeat: no-repeat;
   overflow-x: hidden;
@@ -364,8 +337,7 @@ a{
   border-radius: var(--border-radius);
   margin: 0 -45px;
   backdrop-filter: blur(10px);
-  transform: rotate(calc(var(--r) * 1deg)) translateY(calc(var(--y) * 1px))
-    translateX(calc(var(--x) * -1px));
+  transform: rotate(calc(var(--r) * 1deg)) translateY(calc(var(--y) * 1px)) translateX(calc(var(--x) * -1px));
   transition: all 0.8s linear;
 }
 
@@ -401,11 +373,9 @@ a{
   width: 100%;
   border-radius: 10px;
   background-color: #09c7fb;
-  background-image: linear-gradient(
-    90deg,
-    rgb(9, 199, 251, 0.7) 0%,
-    rgb(147, 251, 157, 0.7) 65%
-  );
+  background-image: linear-gradient(90deg,
+      rgb(9, 199, 251, 0.7) 0%,
+      rgb(147, 251, 157, 0.7) 65%);
   margin-bottom: 35px;
 }
 
@@ -571,9 +541,11 @@ a{
 .next {
   right: 14%;
 }
-.d-none{
+
+.d-none {
   display: none !important;
- }
+}
+
 @media (max-width: 1400px) {
   .intro {
     gap: 30px;
@@ -587,33 +559,68 @@ a{
   .btn {
     padding: 1rem 3rem;
   }
+
   .row {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-around;
     z-index: 99999;
   }
+
   .col {
     width: 30%;
   }
+
   .featured {
     padding: 60px 10px 10px 10px;
   }
+
   ul li .date {
     font-size: 13px;
   }
+
   .header-icon__mobile {
     display: none;
   }
 }
+.projects{
+  position: relative;
+}
+
+.projects__icon {
+  width: 50px;
+  color: whitesmoke;
+  border: 1px solid #41516C;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius:50%;
+  position: absolute;
+  top:calc(50% - 10%)
+  
+}
+.projects__icon--right {
+  right: 0%;
+}
+.projects__icon--left {
+  left: 0%;
+}
+
+
+
+
+
 
 @media (max-width: 975px) {
-  .none{
-    display: block ;
+  .none {
+    display: block;
   }
-  .header_content{
+
+  .header_content {
     display: none;
   }
+
   .intro {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -662,33 +669,41 @@ a{
   .art-twelve {
     grid-area: 8 / 5 / 10 / 7;
   }
+
   //customer
   .time-experience {
     display: none !important;
   }
+
   .timeline_company-experience {
     position: relative;
     top: 0;
     right: 10%;
     margin-top: 10px;
   }
+
   .contact-img {
     display: none;
   }
+
   ul li .date {
     font-size: 13px;
   }
-  .work{
+
+  .work {
     width: 300px;
   }
+
   .contact {
     display: flex;
     justify-content: center;
     width: 90%;
     overflow: hidden !important;
+
     form {
       margin: auto !important;
     }
+
     .earth {
       display: none;
     }
@@ -696,12 +711,14 @@ a{
 }
 
 @media (max-width: 750px) {
- .none{
-  display: block ;
-}
-.header_content{
-  display: none;
-}
+  .none {
+    display: block;
+  }
+
+  .header_content {
+    display: none;
+  }
+
   .grid-area {
     grid-template-columns: repeat(6, 90px);
     grid-template-rows: repeat(9, 90px);
@@ -723,36 +740,43 @@ a{
   .next {
     right: 5%;
   }
+
   .contact-img {
     display: none;
   }
+
   .row {
     flex-direction: column;
   }
+
   .contact {
     display: flex;
     justify-content: center;
     width: 90%;
     overflow: hidden !important;
+
     form {
       margin: auto !important;
     }
+
     .earth {
       display: none;
     }
   }
-  .info{
-    p{
-      padding:0px 5px;
+
+  .info {
+    p {
+      padding: 0px 5px;
     }
   }
 
 }
 
 @media (max-width: 670px) {
- .none{
-  display: block ;
-}
+  .none {
+    display: block;
+  }
+
   .grid-area {
     grid-template-columns: repeat(4, 110px);
     grid-template-rows: repeat(14, 110px);
@@ -781,23 +805,29 @@ a{
   .art-twelve {
     grid-area: 10 / 1 / 12 / 3;
   }
+
   .contact-img {
     display: none;
   }
+
   .login-box {
     width: 300px;
   }
+
   .row {
     flex-direction: column;
   }
+
   .contact {
     display: flex;
     justify-content: center;
     width: 90%;
     overflow: hidden !important;
+
     form {
       margin: auto !important;
     }
+
     .earth {
       display: none;
     }
@@ -805,10 +835,14 @@ a{
 }
 
 @media (max-width: 530px) {
- .none{
-  display: block ;
-}
-   .intro {
+  .projects__icon{
+    display: none;
+  }
+  .none {
+    display: block;
+  }
+
+  .intro {
     grid-template-rows: 45% 45%;
     gap: 20px;
     padding: 10px 60px 60px;
@@ -822,30 +856,39 @@ a{
     grid-template-columns: repeat(4, 90px);
     grid-template-rows: repeat(14, 90px);
   }
+
   .contact {
     display: flex;
     justify-content: center;
     width: 90%;
     overflow: hidden !important;
+
     form {
       margin: auto !important;
     }
+
     .earth {
       display: none;
     }
   }
-  .info{
+
+  .info {
     min-height: 350px !important;
   }
 }
 
 @media (max-width: 460px) {
- .none{
-  display: block ;
-}
-   .date {
+  .projects__icon{
+    display: none;
+  }
+  .none {
+    display: block;
+  }
+
+  .date {
     font-size: 13px !important;
   }
+
   .intro {
     padding: 10px 30px 60px;
   }
@@ -880,35 +923,43 @@ a{
       font-size: 13px;
     }
   }
+
   .header_content {
     display: none !important;
   }
+
   .project .row .col {
     width: 300px;
   }
+
   .contact {
     display: flex;
     justify-content: center;
     width: 90%;
     overflow: hidden !important;
+
     form {
       margin: auto !important;
       width: 320px !important;
     }
+
     .earth {
       display: none;
     }
   }
-    .header img{
-      margin: 0;
-    }
-    .info{
-      min-height: 350px !important;
-    }
+
+  .header img {
+    margin: 0;
+  }
+
+  .info {
+    min-height: 350px !important;
+  }
 }
 
 .timeline_company {
   display: flex;
+
   &-name {
     color: white;
     width: 400px;
@@ -919,23 +970,27 @@ a{
     margin-right: 50px;
     margin-top: 20px;
     border-radius: 10px;
+
     .name-company {
       color: rgb(142, 141, 141) !important;
       font-weight: bold;
       text-transform: uppercase;
       margin-bottom: 10px;
     }
+
     ul {
       li {
         margin-left: 30px;
       }
     }
   }
+
   &-experience {
     background-color: white;
     width: 3px;
     height: 700px;
     position: relative;
+
     img {
       position: absolute;
       width: 60px;
@@ -946,6 +1001,7 @@ a{
       left: -30px;
     }
   }
+
   &-time {
     color: white;
     padding: 10px;
@@ -953,6 +1009,7 @@ a{
     margin-top: 40px;
   }
 }
+
 //img
 @media (orientation: landscape) {
   main {
@@ -961,7 +1018,8 @@ a{
 }
 
 $duration: 4s;
-$delays: ();
+$delays: (
+);
 $variance: 300;
 $easing: cubic-bezier(0.5, 0, 0, 1);
 $gap: 2px;
@@ -969,12 +1027,9 @@ $gap: 2px;
 @for $row from 1 through 3 {
   @for $col from 1 through 3 {
     @for $layer from 1 through 3 {
-      $delays: map-merge(
-        $delays,
-        (
-          "#{$row}#{$col}#{$layer}": random($variance),
-        )
-      );
+      $delays: map-merge($delays,
+          ("#{$row}#{$col}#{$layer}": random($variance),
+          ));
     }
   }
 }
@@ -986,16 +1041,18 @@ label,
   top: 2vmin;
   opacity: 0.5;
 }
+
 label {
   left: 6vmin;
   color: white;
   font-weight: bold;
 }
+
 #shadows {
   left: 2vmin;
 }
 
-#shadows:not(:checked) ~ .cubes {
+#shadows:not(:checked)~.cubes {
   --shadow-filter: none;
 }
 
@@ -1020,7 +1077,7 @@ label {
   top: 0;
   left: 0;
 
-  > .cube-wrap {
+  >.cube-wrap {
     animation: cube $duration infinite both;
     position: absolute;
     top: 0;
@@ -1033,6 +1090,7 @@ label {
     will-change: transform;
 
     @keyframes cube {
+
       from,
       to,
       20%,
@@ -1054,12 +1112,14 @@ label {
     --color-fl-top: #4eafbc;
     --color-fl-bottom: #43a5b2;
   }
+
   &[data-cube^="2"] {
     --color-bg-top: #89e4e4;
     --color-bg-bottom: #76dee5;
     --color-fl-top: #43a5b2;
     --color-fl-bottom: #3d93a9;
   }
+
   &[data-cube^="3"] {
     top: calc(10vmin + #{$gap});
     --color-bg-top: #76dee5;
@@ -1067,6 +1127,7 @@ label {
     --color-fl-top: #3d93a9;
     --color-fl-bottom: #3b8d9f;
   }
+
   &[data-cube^="11"],
   &[data-cube^="21"],
   &[data-cube^="31"] {
@@ -1074,12 +1135,14 @@ label {
     --color-fr-top: #2d505f;
     --color-fr-bottom: #2d4f63;
   }
+
   &[data-cube^="12"],
   &[data-cube^="22"],
   &[data-cube^="32"] {
     --color-fr-top: #2d4f63;
     --color-fr-bottom: #2a5262;
   }
+
   &[data-cube^="13"],
   &[data-cube^="23"],
   &[data-cube^="33"] {
@@ -1100,6 +1163,7 @@ label {
 .large-shadows {
   transform: translateZ(-21vmin);
 }
+
 .large-shadow {
   background: black;
   height: 10vmin;
@@ -1111,18 +1175,22 @@ label {
   will-change: transform;
 
   @keyframes large-shadow {
+
     from,
     80%,
     to {
       transform: scale(1.5, 3);
     }
+
     20% {
       transform: scale(1.5, 2);
     }
+
     40%,
     60% {
       transform: scale(1.5, 5);
     }
+
     50% {
       transform: scale(1, 5);
     }
@@ -1183,12 +1251,14 @@ label {
     animation: cube-top-flash $duration infinite both;
 
     @keyframes cube-top-flash {
+
       from,
       50%,
       60%,
       to {
         opacity: 0;
       }
+
       52% {
         opacity: 0.9;
       }
@@ -1199,6 +1269,7 @@ label {
     20% {
       transform: translateZ(calc(-10vmin + 2vmin));
     }
+
     40%,
     60%,
     80% {
@@ -1213,11 +1284,9 @@ label {
   overflow: hidden;
 
   &:before {
-    background-image: linear-gradient(
-        to bottom,
+    background-image: linear-gradient(to bottom,
         var(--color-fl-top),
-        var(--color-fl-bottom)
-      ),
+        var(--color-fl-bottom)),
       linear-gradient(to bottom, rgba(white, 0.5), transparent 60%);
     background-size: auto auto 1px 100%;
     background-repeat: no-repeat;
@@ -1230,10 +1299,12 @@ label {
     20% {
       transform: scaleX(0.2);
     }
+
     40%,
     60% {
       transform: translateX(-8vmin) scaleX(0.2);
     }
+
     80% {
       transform: none;
     }
@@ -1246,11 +1317,9 @@ label {
 
   &:before {
     // background-color: #2C5060;
-    background-image: linear-gradient(
-      to right,
-      var(--color-fr-top),
-      var(--color-fr-bottom)
-    );
+    background-image: linear-gradient(to right,
+        var(--color-fr-top),
+        var(--color-fr-bottom));
     transform-origin: top;
     animation-name: cube-front-right;
     will-change: transform;
@@ -1260,10 +1329,12 @@ label {
     20% {
       transform: scaleY(0.2);
     }
+
     40%,
     60% {
       transform: translateY(8vmin) scaleY(0.2);
     }
+
     80% {
       transform: none;
     }
@@ -1272,20 +1343,20 @@ label {
 
 .cube-bottom {
   transform: translateZ(-10vmin);
-  background-image: linear-gradient(
-    to bottom,
-    var(--color-bg-top),
-    var(--color-bg-bottom)
-  );
+  background-image: linear-gradient(to bottom,
+      var(--color-bg-top),
+      var(--color-bg-bottom));
   animation-name: cube-bottom;
 
   @keyframes cube-bottom {
+
     from,
     20%,
     80%,
     to {
       transform: translateZ(calc(-10vmin + 1px)) scale(0.95);
     }
+
     40%,
     60% {
       transform: translateZ(-2vmin) scale(0.95);
@@ -1305,12 +1376,14 @@ label {
     will-change: transform;
 
     @keyframes cube-bottom-flash {
+
       from,
       40%,
       50%,
       to {
         opacity: 0;
       }
+
       45% {
         opacity: 0.9;
       }
@@ -1352,12 +1425,14 @@ label {
   &[data-cube^="21"] {
     left: 10%;
   }
+
   &[data-cube^="13"],
   &[data-cube^="23"] {
     left: -10%;
   }
 
   @keyframes shadow-y {
+
     to,
     40%,
     60%,
@@ -1365,6 +1440,7 @@ label {
     from {
       transform: translateY(-100%) scale(2, 0.75);
     }
+
     20% {
       transform: scale(2, 1);
     }
@@ -1375,6 +1451,7 @@ label {
     transform-origin: top center;
 
     @keyframes shadow-y-inverse {
+
       to,
       40%,
       60%,
@@ -1383,6 +1460,7 @@ label {
         opacity: 0.9;
         transform: scale(2, 1);
       }
+
       20% {
         opacity: 0;
         transform: translateY(-100%) scale(2, 0.75);
@@ -1402,6 +1480,7 @@ label {
   overflow: visible;
 
   @keyframes shadow-flip {
+
     from,
     20%,
     40%,
@@ -1409,6 +1488,7 @@ label {
     to {
       transform: rotate(90deg);
     }
+
     45% {
       transform: rotate(270deg);
     }
@@ -1420,6 +1500,7 @@ label {
     opacity: 0;
 
     @keyframes shadow-flip-inverse {
+
       from,
       20%,
       40%,
@@ -1428,6 +1509,7 @@ label {
         transform: rotate(0deg);
         opacity: 0;
       }
+
       45% {
         transform: rotate(-180deg);
         opacity: 0.6;
@@ -1446,22 +1528,26 @@ label {
     --shadow-z-left: 50%;
     --shadow-z-top: 50%;
   }
+
   &[data-cube^="21"],
   &[data-cube^="31"] {
     --shadow-z-left: 50%;
     --shadow-z-top: 0;
   }
+
   &[data-cube^="32"] {
     --shadow-z-left: 0;
     --shadow-z-top: 0;
     --shadow-x-scale: 2;
   }
+
   &[data-cube^="33"] {
     --shadow-z-left: -50%;
     --shadow-z-top: 0;
   }
 
   @keyframes shadow-z {
+
     from,
     40%,
     60%,
@@ -1469,10 +1555,9 @@ label {
     to {
       transform: scale(var(--shadow-x-scale), 2);
     }
+
     20% {
-      transform: translateX(var(--shadow-z-left))
-        translateY(var(--shadow-z-top))
-        scale(calc(var(--shadow-x-scale, 1) / 2), 2);
+      transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(calc(var(--shadow-x-scale, 1) / 2), 2);
     }
   }
 
@@ -1480,22 +1565,26 @@ label {
     animation: shadow-z-inverse $duration infinite both;
 
     @keyframes shadow-z-inverse {
+
       40%,
       60% {
-        transform: translateX(var(--shadow-z-left))
-          translateY(var(--shadow-z-top)) scale(var(--shadow-x-scale, 1), 2);
+        transform: translateX(var(--shadow-z-left)) translateY(var(--shadow-z-top)) scale(var(--shadow-x-scale, 1), 2);
       }
+
       45% {
         opacity: 0;
       }
+
       from,
       40%,
       55% {
         opacity: 0.5;
       }
+
       to {
         opacity: 1;
       }
+
       from,
       20%,
       80%,
@@ -1507,19 +1596,23 @@ label {
 }
 
 @each $key in map-keys($delays) {
-  .cube[data-cube="#{$key}"] > .cube-wrap {
+  .cube[data-cube="#{$key}"]>.cube-wrap {
+
     &,
-    > [class^="cube-"] {
+    >[class^="cube-"] {
+
       &,
       &:before,
       &:after {
         animation-delay: map-get($delays, $key) * 1ms;
       }
     }
+
     [class^="shadow-"] {
       animation-delay: map-get($delays, $key) * 1ms;
     }
   }
+
   [class^="shadow-"][data-cube="#{$key}"]:before,
   .large-shadow[data-cube="#{$key}"] {
     animation-delay: map-get($delays, $key) * 1ms;
@@ -1548,13 +1641,11 @@ label {
   z-index: -1;
   border: inherit;
   border-radius: inherit;
-  background-image: conic-gradient(
-    from var(--angle),
-    #381d6a 80%,
-    #e0d1ff 88%,
-    #e0d1ff 92%,
-    #381d6a 100%
-  );
+  background-image: conic-gradient(from var(--angle),
+      #381d6a 80%,
+      #e0d1ff 88%,
+      #e0d1ff 92%,
+      #381d6a 100%);
   background-origin: border-box;
   -webkit-mask: linear-gradient(black, black) content-box,
     linear-gradient(black, black);
@@ -1568,12 +1659,10 @@ label {
 
 @supports not (background: paint(something)) {
   .media-object::before {
-    background-image: conic-gradient(
-      #381d6a 80%,
-      #e0d1ff 88%,
-      #e0d1ff 92%,
-      #381d6a 100%
-    );
+    background-image: conic-gradient(#381d6a 80%,
+        #e0d1ff 88%,
+        #e0d1ff 92%,
+        #381d6a 100%);
   }
 }
 
@@ -1609,6 +1698,7 @@ label {
   background: var(--bg-color);
   border: 1px solid var(--border-color);
   font: 100%/1.6 "Open Sans", sans-serif;
+
   p {
     color: #94a3b8 !important;
   }
@@ -1652,6 +1742,7 @@ mark {
   text-align: center;
   font-weight: 600;
   line-height: 16px;
+
   &:hover {
     opacity: 0.9;
     border: 1px solid #3b68a8;
@@ -1731,9 +1822,11 @@ mark {
   right: auto;
   left: 32px;
 }
+
 .row {
   display: flex;
 }
+
 .contact {
   width: 85%;
 }
@@ -1838,12 +1931,14 @@ ul li .descr {
   position: relative;
   // padding-inline: 1.5rem;
 }
+
 ul li .title {
   overflow: hidden;
   // padding-block-start: 1.5rem;
   // padding-block-end: 1rem;
   font-weight: 500;
 }
+
 ul li .descr {
   // padding-block-end: 1.5rem;
   font-weight: 300;
@@ -1862,6 +1957,7 @@ ul li .descr::before {
   filter: blur(4px);
   transform: translate(-50%, 50%);
 }
+
 ul li .title::before {
   bottom: calc(100% + 0.125rem);
 }
@@ -1872,18 +1968,22 @@ ul li .descr::before {
 }
 
 @media (min-width: 40rem) {
-  .date{
+  .date {
     font-size: 13px !important;
   }
+
   ul {
     grid-template-columns: 1fr var(--line-w) 1fr;
   }
+
   ul::before {
     grid-column: 2;
   }
+
   ul li:nth-child(odd) {
     grid-column: 1;
   }
+
   ul li:nth-child(even) {
     grid-column: 3;
   }
@@ -1903,6 +2003,7 @@ ul li .descr::before {
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
     background-color: whitesmoke;
   }
+
   ul li:nth-child(odd) .date {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
@@ -1912,6 +2013,7 @@ ul li .descr::before {
   margin-top: 1rem;
   text-align: right;
 }
+
 .credits a {
   color: var(--color);
 }
@@ -1940,21 +2042,25 @@ ul li .descr::before {
   cursor: pointer;
   transform-origin: top bottom;
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+
   .main-content {
     .heading {
       font-size: 12px;
     }
+
     img {
       border-radius: 10px;
       margin-top: 10px;
     }
   }
+
   .container {
     // display: grid;
     // grid-template-columns: repeat(3,1fr) ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     a {
       text-decoration: none;
     }
@@ -2006,10 +2112,12 @@ ul li .descr::before {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   a {
     text-decoration: none;
   }
 }
+
 //test animal
 .contact {
   display: flex;
@@ -2100,31 +2208,37 @@ ul li .descr::before {
         width: 100%;
         height: 100%;
         transform-style: preserve-3d;
+
         &.cube__face--front-side {
           background-color: $cube-front-side-bg-color;
           transform: translateZ(5rem);
           animation: 5s unfold-front linear infinite;
         }
+
         &.cube__face--back-side {
           background-color: $cube-back-side-bg-color;
           transform: translateZ(-5rem);
           animation: 5s unfold-back linear infinite;
         }
+
         &.cube__face--left-side {
           background-color: $cube-left-side-bg-color;
           transform: translateX(-5rem) rotateY(90deg);
           animation: 5s unfold-left linear infinite;
         }
+
         &.cube__face--right-side {
           background-color: $cube-right-side-bg-color;
           transform: translateX(5rem) rotateY(90deg);
           animation: 5s unfold-right linear infinite;
         }
+
         &.cube__face--top-side {
           background-color: $cube-top-side-bg-color;
           transform: translateY(-5rem) rotateX(90deg);
           animation: 5s unfold-top linear infinite;
         }
+
         &.cube__face--bottom-side {
           background-color: $cube-bottom-side-bg-color;
           transform: translateY(5rem) rotateX(90deg);
@@ -2134,60 +2248,72 @@ ul li .descr::before {
     }
 
     @keyframes unfold-top {
+
       0%,
       100% {
         transform: translateY(-5rem) rotateX(90deg);
       }
+
       50% {
         transform: translateY(-15rem) rotateX(90deg);
       }
     }
 
     @keyframes unfold-bottom {
+
       0%,
       100% {
         transform: translateY(5rem) rotateX(90deg);
       }
+
       50% {
         transform: translateY(15rem) rotateX(90deg);
       }
     }
 
     @keyframes unfold-front {
+
       0%,
       100% {
         transform: translateZ(5rem);
       }
+
       50% {
         transform: translateZ(15rem);
       }
     }
 
     @keyframes unfold-back {
+
       0%,
       100% {
         transform: translateZ(-5rem);
       }
+
       50% {
         transform: translateZ(-15rem);
       }
     }
 
     @keyframes unfold-right {
+
       0%,
       100% {
         transform: translateX(5rem) rotateY(90deg);
       }
+
       50% {
         transform: translateX(15rem) rotateY(90deg);
       }
     }
 
     @keyframes unfold-left {
+
       0%,
       100% {
         transform: translateX(-5rem) rotateY(90deg);
       }
+
       50% {
         transform: translateX(-15rem) rotateY(90deg);
       }
@@ -2206,7 +2332,8 @@ ul li .descr::before {
   width: 100%;
   height: 50px;
   text-align: center;
-  min-height:300px;
+  min-height: 300px;
+
   .info-fb {
     margin: auto;
     // float: right;
@@ -2242,7 +2369,3 @@ ul li .descr::before {
     cursor: pointer;
   }
 }
-
-
-
-

@@ -2,10 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, ElementRef, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { NzMessageService } from 'ng-zorro-antd/message';
-import { CarouselModule } from 'primeng/carousel';
-import { ButtonModule } from 'primeng/button';
-
-import { NzNotificationModule, NzNotificationService } from 'ng-zorro-antd/notification';
+import { NzNotificationService } from 'ng-zorro-antd/notification';
 interface ContactForm {
   email: string;
   message: string;
@@ -14,10 +11,11 @@ interface ContactForm {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NzCarouselModule,CommonModule,CarouselModule,ButtonModule],
+  imports: [NzCarouselModule,CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
-  schemas: [NO_ERRORS_SCHEMA]
+  schemas: [NO_ERRORS_SCHEMA],
+  
 })
 export class HomeComponent {
   formData: ContactForm = { email: '', message: '' };
@@ -28,7 +26,7 @@ export class HomeComponent {
   { breakpoint: '768px', numVisible: 1, numScroll: 1 },
   { breakpoint: '560px', numVisible: 1, numScroll: 1 }
 ];
-  project:any=[
+  project=[
     {
       name:'Rune Chữa Lành',
       link:'https://runechualanh.com/',
@@ -44,7 +42,7 @@ export class HomeComponent {
       link:'https://nguyenhongha.netlify.app',
       img:'/assets/images/netflix.jpg',
       datetime:'04/2024',
-      description:"Use APIs to fetch data, split movie categories into components for easy management. Create a router to redirect pages, create login and logout functions, services like login, movie",
+      description:"Use APIs to fetch data, split movie categories into components for easy management. Create a router to redirect pages, services like login, movie",
       technical:[
        'ANGULAR','TypeScript','CSS','HTML'
       ]
@@ -69,7 +67,43 @@ export class HomeComponent {
         'Odoo','Python','JS','SQL'
       ]
     },
+    {
+       name:'ADEC334',
+        link:'https://adec.vn/',
+        img:'/assets/images/Adec.jpg',
+       datetime:'06/2024',
+      description:"The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
+      technical:[
+        'Odoo','Python','JS','SQL'
+      ]
+    },
+    {
+       name:'ADEC334',
+        link:'https://adec.vn/',
+        img:'/assets/images/Adec.jpg',
+       datetime:'06/2024',
+      description:"The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
+      technical:[
+        'Odoo','Python','JS','SQL'
+      ]
+    },
   ]
+
+   currentPage = 0;
+  itemsPerPage = 3;
+
+  get totalPages(): number {
+    return Math.ceil(this.project.length / this.itemsPerPage);
+  }
+
+  prev() {
+    if (this.currentPage > 0) this.currentPage--;
+    console.log(1);
+  }
+  next() {
+    console.log(2);
+    if (this.currentPage < this.totalPages - 1) this.currentPage++;
+  }
 
   ngOnInit(): void {
   }

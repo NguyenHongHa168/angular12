@@ -12,18 +12,18 @@
       </div>
       <div class="header_content">
         <ul>
-          <a href="#1">
-            <li>About</li>
-          </a>
-          <a href="#2">
-            <li>Skill</li>
-          </a>
-          <a href="#3">
-            <li>Work</li>
-          </a>
-          <a href="#4">
-            <li>Contact</li>
-          </a>
+          <li>
+            <a href="#1">About</a>
+          </li>
+          <li>
+            <a href="#2">Skill</a>
+          </li>
+          <li>
+            <a href="#3">Work </a>
+          </li>
+          <li>
+            <a href="#4">Contact</a>
+          </li>
 
         </ul>
       </div>
@@ -191,52 +191,41 @@
   </section>
   <!-- my project -->
   <section class="featured">
-    <h1 class="featured-title">My work project</h1>
-    <div class="container">
+    <h1 class="featured-title" >My work project</h1>
+    <!-- Thêm vào cuối file home.component.html -->
+    <div class="container projects">
       <!-- my profile -->
-      <p-carousel [value]="project" [numVisible]="1" [numScroll]="1" [circular]="false"
-        [responsiveOptions]="responsiveOptions" [showIndicators]="true" [showNavigators]="true">
-        <ng-template let-item pTemplate="item">
-          <a [href]="item.link" target="_blank" class="overflow-hidden">
-            <div class="work" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
-              <div class="main-content">
-                <div class="header">
-                  <span>{{ item.name }}</span>
-                  <span>{{ item.datetime }}</span>
-                </div>
-                <img [src]="item.img" width="100%" height="50%" alt="{{ item.name }}">
-                <p class="heading">{{ item.description }}</p>
-                <div class="categories">
-                  <span *ngFor="let tech of item.technical">{{ tech }}</span>
-                </div>
-              </div>
-            </div>
-          </a>
-        </ng-template>
-      </p-carousel>
-
-
-
-      <!-- <a [href]="items.link" target="_blank" *ngFor="let items of project">
+      <div class="projects__icon projects__icon--left" (click)="prev()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+        </svg>
+      </div>
+      <a [href]="items.link" target="_blank" *ngFor="let items of project | slice:(currentPage * itemsPerPage):(currentPage * itemsPerPage + itemsPerPage)">
         <div class="work" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
           <div class="main-content ">
             <div class="header">
               <span>{{items.name}}</span>
-              <span>{{items.date}}</span>
+              <span>{{items.datetime}}</span>
             </div>
             <img [src]="items.img" width="100%" height="50%" alt="Project_1">
             <p class="heading">
-               {{items.description}}
+              {{items.description}}
             </p>
             <div class="categories">
-              <span>Odoo </span>
-              <span>Python</span>
-              <span>SQL</span>
-              <span>XML</span>
+              <span *ngFor="let tech of items.technical">{{ tech }}</span>
             </div>
           </div>
         </div>
-      </a> -->
+      </a>
+      <div class="projects__icon projects__icon--right"  (click)="next()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+        </svg>
+      </div>
     </div>
   </section>
   <!-- contact -->
@@ -249,11 +238,11 @@
         <textarea placeholder="Your message" type="email" [(ngModel)]="formData.email" name="email"></textarea>
         <button (click)="createNotify('success')"> Submit</button>
       </form> -->
-      <form class="form" >
+      <form class="form">
         <div class="title">Contact us</div>
         <input placeholder="Your email" class="input" type="text" [(ngModel)]="formData.email" name="email" />
         <textarea placeholder="Your message" class="input" [(ngModel)]="formData.message" name="message"></textarea>
-        <button type="submit" >Submit</button>
+        <button type="submit">Submit</button>
       </form>
       <div class="earth" style="position: relative !important;">
         <div class="cube">
