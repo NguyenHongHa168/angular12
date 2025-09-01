@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, NO_ERRORS_SCHEMA } from '@angular/core';
 import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import { NzMessageService } from 'ng-zorro-antd/message';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
 interface ContactForm {
   email: string;
@@ -19,7 +18,6 @@ interface ContactForm {
 })
 export class HomeComponent {
   formData: ContactForm = { email: '', message: '' };
-  private storageKey = 'contact-form';
   checkScreen : boolean = false;
   responsiveOptions = [
   { breakpoint: '1024px', numVisible: 1, numScroll: 1 },
@@ -97,28 +95,20 @@ export class HomeComponent {
   }
 
   prev() {
-    if (this.currentPage > 0) this.currentPage--;
     console.log(1);
+    if (this.currentPage > 0) this.currentPage--;
   }
   next() {
     console.log(2);
     if (this.currentPage < this.totalPages - 1) this.currentPage++;
   }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
+
   constructor(
     private notification: NzNotificationService,
-    private nzMessageService: NzMessageService,
-    private message: NzMessageService
   ) { }
-
-  createNotify(type: 'success' | 'info' | 'warning' | 'error'): void {
-  this.notification[type](
-    'Thông báo',
-    'Bạn đã gửi thành công !!!'
-  );
-}
 
   iconHeader() {
     var screenWidth = window.innerWidth;
