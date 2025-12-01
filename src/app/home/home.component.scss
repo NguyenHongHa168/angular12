@@ -583,7 +583,8 @@ a {
     display: none;
   }
 }
-.projects{
+
+.projects {
   position: relative;
 }
 
@@ -595,14 +596,16 @@ a {
   align-items: center;
   justify-content: center;
   display: flex;
-  border-radius:50%;
+  border-radius: 50%;
   position: absolute;
-  top:calc(50% - 10%)
-  
+  top: calc(50% - 10%);
+
 }
+
 .projects__icon--right {
   right: 0%;
 }
+
 .projects__icon--left {
   left: 0%;
 }
@@ -835,9 +838,10 @@ a {
 }
 
 @media (max-width: 530px) {
-  .projects__icon{
+  .projects__icon {
     display: none;
   }
+
   .none {
     display: block;
   }
@@ -878,9 +882,10 @@ a {
 }
 
 @media (max-width: 460px) {
-  .projects__icon{
+  .projects__icon {
     display: none;
   }
+
   .none {
     display: block;
   }
@@ -1680,6 +1685,12 @@ label {
   to {
     --angle: 1turn;
   }
+}
+
+.card__project {
+  background: none !important;
+  border: none !important;
+  flex: 2 0 20.333333% !important;
 }
 
 //my project

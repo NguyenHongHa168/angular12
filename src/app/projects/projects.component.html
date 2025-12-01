@@ -1,0 +1,43 @@
+
+<div class="card">
+  <p-carousel 
+    [value]="projects"
+    [numVisible]="3"
+    [numScroll]="1"
+    [circular]="true"
+    [responsiveOptions]="responsiveOptions"
+    [autoplayInterval]="3000"
+    [showIndicators]="true"
+    [showNavigators]="true">
+
+    <!-- LƯU Ý: let-item (mỗi vòng lặp p-carousel truyền vào 'item') -->
+    <ng-template pTemplate="item" let-item>
+      <div class="border border-surface-200 dark:border-surface-700 rounded m-2 p-4">
+        <div class="mb-4" style="height: 250px; background-color: #f3f3f3;">
+          <!-- dùng item.img thay vì src cố định -->
+          <img [src]="item.img" [alt]="item.name" class=" h-full object-cover rounded" style="width:200px"/>
+        </div>
+
+        <div class="mb-2 font-medium text-lg">{{ item.name }}</div>
+        <div class="mb-2 text-sm text-muted">{{ item.description }}</div>
+        <!-- nếu technical là mảng, hiển thị từng item -->
+        <div class="mb-2">
+          <span *ngFor="let t of item.technical; let i = index" class="text-xs mr-2 px-2 py-0.5 border rounded">
+            {{ t }}
+          </span>
+        </div>
+
+        <div class="flex justify-between items-center mt-3">
+          <div class="font-semibold text-base">{{ item.datetime }}</div>
+          <div>
+            <!-- ví dụ: nút hoặc link -->
+            <a [href]="item.link" target="_blank" rel="noopener" class="text-sm underline">View</a>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+  </p-carousel>
+</div>
+
+

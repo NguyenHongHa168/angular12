@@ -1,34 +1,17 @@
-import { CommonModule, NgFor } from '@angular/common';
-import { Component, NO_ERRORS_SCHEMA, OnInit } from '@angular/core';
-import { NzCarouselModule } from 'ng-zorro-antd/carousel';
-import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { ButtonModule } from 'primeng/button';
-import { RouterLink } from "@angular/router";
+import { NgFor } from '@angular/common';
+import { Component } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 
-interface ContactForm {
-  email: string;
-  message: string;
-}
-
 @Component({
-  selector: 'app-home',
+  selector: 'app-projects',
   standalone: true,
-  imports: [NzCarouselModule, CommonModule, NgFor, ButtonModule, RouterLink,CarouselModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  schemas: [NO_ERRORS_SCHEMA],
-
+  imports: [CarouselModule,NgFor],
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.scss'
 })
-export class HomeComponent implements OnInit {
-  formData: ContactForm = { email: '', message: '' };
-  checkScreen: boolean = false;
-  responsiveOptions = [
-    { breakpoint: '1024px', numVisible: 1, numScroll: 1 },
-    { breakpoint: '768px', numVisible: 1, numScroll: 1 },
-    { breakpoint: '560px', numVisible: 1, numScroll: 1 }
-  ];
-  projects = [
+export class ProjectsComponent {
+  responsiveOptions: any[] | undefined;
+projects = [
     {
       id: 1,
       name: 'Rune Chữa Lành',
@@ -75,8 +58,8 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 5,
-      name: 'ADECSOL',
-      link: 'https://adecsol.vn/',
+      name: 'ADEC5',
+      link: 'https://adec.vn/',
       img: '/assets/images/Adec.jpg',
       datetime: '06/2024',
       description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
@@ -86,9 +69,9 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 6,
-      name: 'No Sugar No Lie',
-      link: '',
-      img: '/assets/images/nosugarnolie.jpg',
+      name: 'ADEC6',
+      link: 'https://adec.vn/',
+      img: '/assets/images/Adec.jpg',
       datetime: '06/2024',
       description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
       technical: [
@@ -97,9 +80,9 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 7,
-      name: '160CStore',
-      link: '',
-      img: '/assets/images/blog-3.jpg',
+      name: 'ADEC7',
+      link: 'https://adec.vn/',
+      img: '/assets/images/Adec.jpg',
       datetime: '06/2024',
       description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
       technical: [
@@ -108,8 +91,8 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 8,
-      name: 'Web Hoc Tieng Nhat',
-      link: '',
+      name: 'ADEC8',
+      link: 'https://adec.vn/',
       img: '/assets/images/Adec.jpg',
       datetime: '06/2024',
       description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
@@ -119,60 +102,14 @@ export class HomeComponent implements OnInit {
     },
     {
       id: 9,
-      name: 'Quản lý shop thời trang',
+      name: 'ADEC9',
       link: 'https://adec.vn/',
-      img: '/assets/images/blog-2.jpg',
+      img: '/assets/images/Adec.jpg',
       datetime: '06/2024',
       description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
       technical: [
-        'ReactJS', 'JavaScript', 'NodeJS'
+        'Odoo', 'Python', 'JS', 'SQL'
       ]
     },
   ]
-
-  currentPage = 0;
-  itemsPerPage = 3;
-
-  ngOnInit() {
-
-  }
-  ngDestroy() {
-    console.log('itemsPerPage', this.itemsPerPage);
-    console.log("this.currentPage", this.currentPage);
-  }
-
-  constructor(
-    private notification: NzNotificationService,
-  ) { }
-
-  get totalPages(): number {
-    return Math.ceil(this.projects.length / this.itemsPerPage);
-  }
-
-  prev() {
-    if (this.currentPage > 3) {
-      this.currentPage--;
-    }
-
-  }
-  next() {
-    if (this.currentPage < this.totalPages - 1){
-      this.currentPage++;
-    } 
-  }
-
-
-  iconHeader() {
-    var screenWidth = window.innerWidth;
-    if (screenWidth <= 812) {
-      this.checkScreen = !this.checkScreen
-    }
-  }
-  onSubmit() {
-    this.notification.success('Success', 'Your message has been sent successfully!');
-    this.formData = { email: '', message: '' };
-    alert('Your message has been sent successfully!');
-  }
-
-
 }
