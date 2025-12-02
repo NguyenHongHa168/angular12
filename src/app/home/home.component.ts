@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
       datetime: ' 07/2024',
       description: "The website is an outsourced project handled by the team. It is designed to calculate a user's zodiac sign and personality traits based on their date of birth.",
       technical: [
-        'ANGULAR', 'TypeScript', 'CSS', 'HTML'
+        'ANGULAR', 'TS', 'CSS', 'HTML'
       ]
     },
     {
@@ -48,7 +48,51 @@ export class HomeComponent implements OnInit {
       datetime: '04/2024',
       description: "Use APIs to fetch data, split movie categories into components for easy management. Create a router to redirect pages, services like login, movie",
       technical: [
-        'ANGULAR', 'TypeScript', 'CSS', 'HTML'
+        'ANGULAR', 'TS', 'CSS', 'HTML'
+      ]
+    },
+    {
+      id: 6,
+      name: 'No Sugar No Lie',
+      link: 'https://github.com/NguyenHongHa168/healthy-food',
+      img: '/assets/images/nosugarnolie.jpg',
+      datetime: '09/2025',
+      description: "The website is built with framework Angular to create a user-friendly interface that displays a list of dishes along with calorie information. Users can view calorie details, and filter items based on their dietary goals",
+      technical: [
+         'ANGULAR', 'TS', 'CSS', 'HTML','json'
+      ]
+    },
+    {
+      id: 7,
+      name: '160CStore',
+      link: 'https://github.com/NguyenHongHa168/shop_thoi_trang',
+      img: '/assets/images/blog-3.jpg',
+      datetime: '10/2025',
+      description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
+      technical: [
+        'PHP', 'SQL'
+      ]
+    },
+    {
+      id: 8,
+      name: 'Japanese learning website',
+      link: '',
+      img: '/assets/images/blog-2.jpg',
+      datetime: '06/2024',
+      description: "A Japanese-learning web app using PHP, helping learners practice listening and writing, take quizzes, track their progress, and get suggestions for the next lesson.",
+      technical: [
+        'PHP', 'TS', 'CSS', 'SQL'
+      ]
+    },
+    {
+      id: 9,
+      name: 'Fashion Shop Management',
+      link: 'https://adec.vn/',
+      img: '/assets/images/blog-2.jpg',
+      datetime: '08/2025',
+      description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
+      technical: [
+        'ReactJS', 'JavaScript', 'NodeJS'
       ]
     },
     {
@@ -57,7 +101,7 @@ export class HomeComponent implements OnInit {
       link: 'https://erp.ade.vn/',
       img: '/assets/images/ade.jpg',
       datetime: '06/2024',
-      description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
+      description: " Collaborated with the team to build, edit, and develop the website for project, sales, employee, and CRM, Repair modules...",
       technical: [
         'Odoo', 'Python', 'JS', 'SQL'
       ]
@@ -77,57 +121,13 @@ export class HomeComponent implements OnInit {
       id: 5,
       name: 'ADECSOL',
       link: 'https://adecsol.vn/',
-      img: '/assets/images/Adec.jpg',
+      img: '/assets/images/adecsol.jpg',
       datetime: '06/2024',
       description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
       technical: [
         'Odoo', 'Python', 'JS', 'SQL'
       ]
-    },
-    {
-      id: 6,
-      name: 'No Sugar No Lie',
-      link: '',
-      img: '/assets/images/nosugarnolie.jpg',
-      datetime: '06/2024',
-      description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
-      technical: [
-        'Odoo', 'Python', 'JS', 'SQL'
-      ]
-    },
-    {
-      id: 7,
-      name: '160CStore',
-      link: '',
-      img: '/assets/images/blog-3.jpg',
-      datetime: '06/2024',
-      description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
-      technical: [
-        'Odoo', 'Python', 'JS', 'SQL'
-      ]
-    },
-    {
-      id: 8,
-      name: 'Web Hoc Tieng Nhat',
-      link: '',
-      img: '/assets/images/Adec.jpg',
-      datetime: '06/2024',
-      description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
-      technical: [
-        'Odoo', 'Python', 'JS', 'SQL'
-      ]
-    },
-    {
-      id: 9,
-      name: 'Quản lý shop thời trang',
-      link: 'https://adec.vn/',
-      img: '/assets/images/blog-2.jpg',
-      datetime: '06/2024',
-      description: "The project was customized based on the enterprise's specific needs, using core modules such as Sales, Purchase, Project, CRM, Inventory, Employee...",
-      technical: [
-        'ReactJS', 'JavaScript', 'NodeJS'
-      ]
-    },
+    }
   ]
 
   currentPage = 0;

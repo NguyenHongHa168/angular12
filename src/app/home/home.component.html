@@ -198,7 +198,7 @@
         <p-carousel [value]="projects" [numVisible]="3" [numScroll]="3" [circular]="false"
             [responsiveOptions]="responsiveOptions">
           <ng-template let-item pTemplate="item">
-            <div class="work overflow-hidden">
+            <a class="work overflow-hidden" href="{{item.link}}" target="_blank" rel="noopener noreferrer">
               <div class="mb-4">
                 <div class="header mb-2">
                   <span>{{item.name}}</span>
@@ -213,7 +213,7 @@
               <div class="categories">
                 <span *ngFor="let tech of item.technical">{{ tech }}</span>
               </div>
-            </div>
+            </a>
           </ng-template>
         </p-carousel>
       </div>
